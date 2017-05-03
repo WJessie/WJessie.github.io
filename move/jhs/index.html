@@ -1,0 +1,567 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>聚划算</title>
+
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<!-- <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded',function (){
+        var oUl=document.querySelector('.banner_box ul');
+        var oOl=document.querySelector('.ol_box ol');
+        var aLi=oUl.children;
+        var aOlLi=oOl.children;
+        var iNow=1;
+        var x=0;
+        var bOk=false;
+        x=-iNow*aLi[0].offsetWidth;
+        oUl.style.width = aLi.length*aLi[0].offsetWidth + 'px';
+        oUl.style.WebkitTransform='translate('+x+'px)';
+        var timer = setInterval(function(){
+            iNow++;
+            tab();
+        },2000)
+        function tab(){
+            oUl.style.transition = '1s ease all';
+
+            if(iNow <= -1){
+                oUl.style.transition = 'none';
+                iNow = aLi.length - 1;
+            }else if(iNow >= aLi.length-1){
+                oUl.style.transition = 'none';
+                iNow = 0;
+            }
+             x=-iNow*aLi[0].offsetWidth;
+            oUl.style.WebkitTransform='translateX('+x+'px)';
+            for(var i = 0;i < aOlLi.length;i++){
+                aOlLi[i].className = "";
+             }
+             if(iNow == 0){
+                aOlLi[aOlLi.length-1].className = "active";
+             }else if(iNow == aOlLi.length+1){
+                aOlLi[0].className = "active";
+             }else{
+                aOlLi[iNow-1].className = "active";
+             }
+        }
+        oUl.addEventListener('touchstart',function (ev){
+            if(bOk)return;
+            clearInterval(timer);
+            bOk=true;
+            var disX=ev.targetTouches[0].pageX-x;
+            var downX=ev.targetTouches[0].pageX;
+
+            oUl.style.WebkitTransition='1s all ease';
+            function fnMove(ev){
+                x=ev.targetTouches[0].pageX-disX;
+
+                oUl.style.WebkitTransform='translate('+x+'px)';
+            }
+            function fnEnd(ev){
+                document.removeEventListener('touchmove',fnMove,false);
+                document.removeEventListener('touchend',fnEnd,false);
+
+                var upX=ev.changedTouches[0].pageX;
+
+                if(Math.abs(upX-downX)>50){
+                    if(downX>upX){  //++
+                        iNow++;
+                    }else{          //--
+                        iNow--;
+                    }
+                }
+                tab();
+            }
+
+            function tEnd(){
+                bOk=false;
+                if(iNow==5){
+                    iNow=1;
+                    x=-iNow*aLi[0].offsetWidth;
+                    oUl.style.transition='none';
+                    oUl.style.WebkitTransform='translateX('+x+'px)';
+                }
+                if(iNow==0){
+                    iNow=4;
+                    x=-iNow*aLi[0].offsetWidth;
+                    oUl.style.transition='none';
+                    oUl.style.WebkitTransform='translateX('+x+'px)';
+                }
+                oUl.removeEventListener('transitionend',tEnd,false);
+            }
+
+            oUl.addEventListener('transitionend',tEnd,false);
+
+            document.addEventListener('touchmove',fnMove,false);
+            document.addEventListener('touchend',fnEnd,false);
+            ev.preventDefault();
+        },false);
+    },false);
+</script> -->
+</head>
+<body>
+    <header >
+        <a class="logo_a" href="javascript:;"><img src="images/logo.jpg" alt="" /></a>
+        <a class="back_a"href=""><img src="images/back.jpg" alt="" /></a>
+    </header>
+    <section class="main_box">
+        <div class="swiper-container">
+                <div class="swiper-wrapper banner_box" >
+                    <div class="swiper-slide">
+                         <img src="images/main_1.png" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                         <img src="images/main_2.png" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                         <img src="images/main_3.png" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                         <img src="images/main_4.png" alt="" />
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+        <div class="ol_box swiper-pagination">
+        </div>
+    </section>
+    <section>
+        <div class="list_box">
+            <ul class="clearfix">
+                <li>
+                    <a href="goods.html">
+                        <div class="list_div">
+                            <img src="images/class_1.png" alt="" />
+                        </div>
+                        <p class="list_p">商品</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="life.html">
+                        <div class="list_div">
+                            <img src="images/class_2.png" alt="" />
+                        </div>
+                        <p class="list_p">生活</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="brand.html">
+                        <div class="list_div">
+                            <img src="images/class_3.png" alt="" />
+                        </div>
+                        <p class="list_p">品牌</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javscript:;">
+                        <div class="list_div">
+                            <img src="images/class_4.png" alt="" />
+                        </div>
+                        <p class="list_p">聚宝盆</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javscript:;">
+                        <div class="list_div">
+                            <img src="images/class_5.png" alt="" />
+                        </div>
+                        <p class="list_p">聚名品</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javscript:;">
+                        <div class="list_div">
+                            <img src="images/class_6.png" alt="" />
+                        </div>
+                        <p class="list_p">聚家族</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javscript:;">
+                        <div class="list_div">
+                            <img src="images/class_7.png" alt="" />
+                        </div>
+                        <p class="list_p">剧透</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="javscript:;">
+                        <div class="list_div">
+                            <img src="images/class_8.png" alt="" />
+                        </div>
+                        <p class="list_p">客户端</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="hot_list_box">
+            <div class="clearfix hot_hd">
+                <div class="hot_bar fl"></div>
+                <div class="hot_font1 fl">
+                    聚划算乐卖排行
+                </div>
+                <div class="hot_font2 fr">
+                    TOP10
+                </div>
+            </div>
+            <ul class="hot_ul">
+                <li class="clearfix">
+                    <div class="hot_num fl">
+                        1
+                    </div>
+                    <div class="hot_img_box hot_img_box1 fl">
+
+                    </div>
+                    <div class="hot_des fl clearfix">
+                        <div class="fl des_1">
+                            <p>
+                                已售 68934
+                            </p>
+                            <p>
+                                <span>2.3</span>折
+                                ¥ 299
+                            </p>
+                        </div>
+                        <div class="fr des_2">
+                            <span>¥ 51 </span> >
+                        </div>
+                    </div>
+                </li>
+                 <li class="clearfix">
+                    <div class="hot_num fl">
+                        2
+                    </div>
+                    <div class="hot_img_box hot_img_box2 fl">
+
+                    </div>
+                    <div class="hot_des fl clearfix">
+                        <div class="fl des_1">
+                            <p>
+                                已售 68934
+                            </p>
+                            <p>
+                                <span>2.3</span>折
+                                ¥ 299
+                            </p>
+                        </div>
+                        <div class="fr des_2">
+                            <span>¥ 51 </span> >
+                        </div>
+                    </div>
+                </li>
+                 <li class="clearfix">
+                    <div class="hot_num fl">
+                        3
+                    </div>
+                    <div class="hot_img_box hot_img_box3 fl">
+
+                    </div>
+                    <div class="hot_des fl clearfix">
+                        <div class="fl des_1">
+                            <p>
+                                已售 68934
+                            </p>
+                            <p>
+                                <span>2.3</span>折
+                                ¥ 299
+                            </p>
+                        </div>
+                        <div class="fr des_2">
+                            <span>¥ 51 </span> >
+                        </div>
+                    </div>
+                </li>
+                 <li class="clearfix">
+                    <div class="hot_num fl">
+                        4
+                    </div>
+                    <div class="hot_img_box hot_img_box4 fl">
+
+                    </div>
+                    <div class="hot_des fl clearfix">
+                        <div class="fl des_1">
+                            <p>
+                                已售 68934
+                            </p>
+                            <p>
+                                <span>2.3</span>折
+                                ¥ 299
+                            </p>
+                        </div>
+                        <div class="fr des_2">
+                            <span>¥ 51 </span> >
+                        </div>
+                    </div>
+                </li>
+                 <li class="clearfix">
+                    <div class="hot_num fl">
+                        5
+                    </div>
+                    <div class="hot_img_box hot_img_box5 fl">
+
+                    </div>
+                    <div class="hot_des fl clearfix">
+                        <div class="fl des_1">
+                            <p>
+                                已售 68934
+                            </p>
+                            <p>
+                                <span>2.3</span>折
+                                ¥ 299
+                            </p>
+                        </div>
+                        <div class="fr des_2">
+                            <span>¥ 51 </span> >
+                        </div>
+                    </div>
+                </li>
+                 <li class="clearfix">
+                    <div class="hot_num fl">
+                        6
+                    </div>
+                    <div class="hot_img_box hot_img_box6 fl">
+
+                    </div>
+                    <div class="hot_des fl clearfix">
+                        <div class="fl des_1">
+                            <p>
+                                已售 68934
+                            </p>
+                            <p>
+                                <span>2.3</span>折
+                                ¥ 299
+                            </p>
+                        </div>
+                        <div class="fr des_2">
+                            <span>¥ 51 </span> >
+                        </div>
+                    </div>
+                </li>
+                 <li class="clearfix">
+                    <div class="hot_num fl">
+                        7
+                    </div>
+                    <div class="hot_img_box hot_img_box7 fl">
+
+                    </div>
+                    <div class="hot_des fl clearfix">
+                        <div class="fl des_1">
+                            <p>
+                                已售 68934
+                            </p>
+                            <p>
+                                <span>2.3</span>折
+                                ¥ 299
+                            </p>
+                        </div>
+                        <div class="fr des_2">
+                            <span>¥ 51 </span> >
+                        </div>
+                    </div>
+                </li>
+                 <li class="clearfix">
+                    <div class="hot_num fl">
+                        8
+                    </div>
+                    <div class="hot_img_box hot_img_box8 fl">
+
+                    </div>
+                    <div class="hot_des fl clearfix">
+                        <div class="fl des_1">
+                            <p>
+                                已售 68934
+                            </p>
+                            <p>
+                                <span>2.3</span>折
+                                ¥ 299
+                            </p>
+                        </div>
+                        <div class="fr des_2">
+                            <span>¥ 51 </span> >
+                        </div>
+                    </div>
+                </li>
+                 <li class="clearfix">
+                    <div class="hot_num fl">
+                        9
+                    </div>
+                    <div class="hot_img_box hot_img_box9 fl">
+
+                    </div>
+                    <div class="hot_des fl clearfix">
+                        <div class="fl des_1">
+                            <p>
+                                已售 68934
+                            </p>
+                            <p>
+                                <span>2.3</span>折
+                                ¥ 299
+                            </p>
+                        </div>
+                        <div class="fr des_2">
+                            <span>¥ 51 </span> >
+                        </div>
+                    </div>
+                </li>
+                 <li class="clearfix">
+                    <div class="hot_num fl">
+                        10
+                    </div>
+                    <div class="hot_img_box hot_img_box10 fl">
+
+                    </div>
+                    <div class="hot_des fl clearfix">
+                        <div class="fl des_1">
+                            <p>
+                                已售 68934
+                            </p>
+                            <p>
+                                <span>2.3</span>折
+                                ¥ 299
+                            </p>
+                        </div>
+                        <div class="fr des_2">
+                            <span>¥ 51 </span> >
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div class="shop_list_box">
+            <div class="title_bar">
+                更多划算 逛起来！
+            </div>
+            <div class="clearfix">
+                <div class="fl shop_left">
+                    <img src="images/group_01.png" alt="" />
+                </div>
+                <ul class="fl clearfix shop_right">
+                    <li class="fl"><a href="javascript:;">服饰</a></li>
+                    <li class="fl"><a href="javascript:;">配饰</a></li>
+                    <li class="fl"><a href="javascript:;">美妆</a></li>
+                    <li class="fl"><a href="javascript:;">鞋包</a></li>
+                    <li class="fl"><a href="javascript:;">食品</a></li>
+                    <li class="fl"><a href="javascript:;">家居</a></li>
+                    <li class="fl"><a href="javascript:;">运动</a></li>
+                    <li class="fl"><a href="javascript:;">电器</a></li>
+                    <li class="fl"><a href="javascript:;">百货</a></li>
+                    <li class="fl"><a href="javascript:;">母婴</a></li>
+                    <li class="fl"><a href="javascript:;">数码</a></li>
+                    <li class="fl"><a href="javascript:;">更过</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="shop_list_box">
+            <div class="title_bar">
+                品牌生活 逛起来！
+            </div>
+            <div class="clearfix">
+                <div class="fl shop_left">
+                    <img src="images/group_02.png" alt="" />
+                </div>
+                <ul class="fl clearfix shop_right">
+                    <li class="fl"><a href="javascript:;">美食</a></li>
+                    <li class="fl"><a href="javascript:;">教育</a></li>
+                    <li class="fl"><a href="javascript:;">酒店</a></li>
+                    <li class="fl"><a href="javascript:;">电影</a></li>
+                    <li class="fl"><a href="javascript:;">生活服务</a></li>
+                    <li class="fl"><a href="javascript:;">卡卷</a></li>
+                    <li class="fl"><a href="javascript:;">摄影</a></li>
+                    <li class="fl"><a href="javascript:;">粮油生鲜</a></li>
+                    <li class="fl"><a href="javascript:;">门票</a></li>
+                    <li class="fl"><a href="javascript:;">休闲娱乐</a></li>
+                    <li class="fl"><a href="javascript:;"></a></li>
+                    <li class="fl"><a href="javascript:;"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="shop_list_box">
+            <div class="title_bar">
+                品质生活 逛起来！
+            </div>
+            <div class="clearfix">
+                <div class="fl shop_left">
+                    <img src="images/group_3.png" alt="" />
+                </div>
+                <ul class="fl clearfix shop_right">
+                    <li class="fl"><a href="javascript:;">七匹狼</a></li>
+                    <li class="fl"><a href="javascript:;">粉红女...</a></li>
+                    <li class="fl"><a href="javascript:;">卓诗尼</a></li>
+                    <li class="fl"><a href="javascript:;">收纳博士</a></li>
+                    <li class="fl"><a href="javascript:;">惠氏</a></li>
+                    <li class="fl"><a href="javascript:;">夏乐</a></li>
+                    <li class="fl"><a href="javascript:;">帕克伦</a></li>
+                    <li class="fl"><a href="javascript:;">古今</a></li>
+                    <li class="fl"><a href="javascript:;">九牧</a></li>
+                    <li class="fl"><a href="javascript:;">诺奥</a></li>
+                    <li class="fl"><a href="javascript:;">红豆</a></li>
+                    <li class="fl"><a href="javascript:;">曼秀雷敦</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="shop_list_box">
+            <div class="title_bar">
+                品牌折扣 逛起来！
+            </div>
+            <div class="clearfix">
+                <ul class=" clearfix sys_box">
+                    <li class="fl">
+                        <p>ios客户端</p>
+                    </li>
+                    <li class="fl">
+                        <p>安卓客户端</p>
+                    </li>
+                    <li class="fl">
+                        <p>意见反馈</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+</body>
+<script>
+;(function (win,doc){
+    function changeSize(){
+        doc.documentElement.style.fontSize=50*doc.documentElement.clientWidth/320+'px';
+    }
+    changeSize();
+    win.addEventListener('resize',changeSize,false);
+})(window,document);
+var swiper1 = new Swiper('.swiper-container', {
+           pagination: '.swiper-pagination',
+           nextButton: '.swiper-button-next',
+           prevButton: '.swiper-button-prev',
+           slidesPerView: 1,
+           paginationClickable: true,
+           loop: true
+       });
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
